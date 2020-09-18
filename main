@@ -1,0 +1,93 @@
+/*
+Escreva um programa, em LINGUAGEM C, que:
+
+a) Solicite ao usuário a entrada de um registro que armazene na memória o
+Nome do funcionário e o seu salário.
+
+b) Utilizando o salário informado calcule o imposto de renda devido e mostre
+na tela, conforme a tabela abaixo:
+
+	1.637.11 - 0%
+	1.637.12 / 2453.50 - 7.5%
+	2.453.51 / 3.271.38 - 15.0%
+	3.271.39 / 4.087.65 - 22.5%
+	4.087.65 ++ - 27.5%
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main() {
+
+	struct Inf_Funcionario
+	{
+		char nome[50];
+		float salario;
+	}; 
+	struct Inf_Funcionario Funcionario;
+
+	printf("Exercicio 2 ---------------------------------------------------------------------------- Gabriel Moreira - RU: 3329252");
+	printf("\n\n");
+	printf("\t\t\t\t.:.:.:.:.:IMPOSTO DE RENDA:.:.:.:.:.");
+	printf("\n\n");
+
+	printf("	Base de calculdo \t Aliquota");
+	printf("\n\n");
+	printf("	1.637.11 - XXX-XXX \t    0 \n");
+	printf("	1.637.12 - 2453.50   \t  7.5 \n");
+	printf("	2.453.51 - 3.71.38   \t 15.0 \n");
+	printf("	3.271.39 - 4.087.65   \t 22.5 \n");
+	printf("	XXX-XXXX - 4.087.65 \t 27.5 \n\n");
+
+	printf("Informe o nome do funcionario: ");
+	gets_s(Funcionario.nome);
+	printf("\n");
+
+	printf("Informe o salario do funcionario: ");
+	scanf_s("%f", &Funcionario.salario);
+	printf("\n");
+
+	if (Funcionario.salario < 1637.11)
+	{ 
+		printf("Nao tera de pagar nenhum valor. \n");
+	}
+
+	if (Funcionario.salario > 1637.12 && Funcionario.salario < 2453.50)
+	{
+		float resultado;
+
+		resultado = (Funcionario.salario * 7.5) / 100;
+		printf("\n");
+		printf("Resultado do calculo do imposto de renda de %s: %.2f R$ \n\n", Funcionario.nome, resultado);
+	}
+
+	if (Funcionario.salario > 2453.51 && Funcionario.salario < 3271.38)
+	{
+		float resultado;
+
+		resultado = (Funcionario.salario * 15.0) / 100;
+		printf("\n");
+		printf("Resultado do calculo do imposto de renda de %s: %.2f R$ \n\n", Funcionario.nome, resultado);
+	}
+
+	if (Funcionario.salario > 3271.39 && Funcionario.salario < 4087.65)
+	{
+		float resultado;
+
+		resultado = (Funcionario.salario * 22.5) / 100;
+		printf("\n");
+		printf("Resultado do calculo do imposto de renda de %s: %.2f R$ \n\n", Funcionario.nome, resultado);
+	}
+
+	if (Funcionario.salario > 4087.65)
+	{
+		float resultado;
+
+		resultado = (Funcionario.salario * 27.5) / 100;
+		printf("\n");
+		printf("Resultado do calculo do imposto de renda de %s: %.2f R$ \n\n", Funcionario.nome, resultado);
+	}
+	printf("Exercicio 2 ---------------------------------------------------------------------------- Gabriel Moreira - RU: 3329252");
+		printf("\n\n");
+}
