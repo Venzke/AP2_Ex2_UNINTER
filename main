@@ -15,45 +15,45 @@ na tela, conforme a tabela abaixo:
 */
 
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h> //Bibliotecas
 
 
 int main() {
 
-	struct Inf_Funcionario
+	struct Inf_Funcionario //Struct para guardar as duas váriaveis 
 	{
 		char nome[50];
 		float salario;
 	}; 
-	struct Inf_Funcionario Funcionario;
+	struct Inf_Funcionario Funcionario; //Informando o nome que chamara a struct
 
-	printf("Exercicio 2 ---------------------------------------------------------------------------- Gabriel Moreira - RU: 3329252");
+	printf("Exercicio 2 ---------------------------------------------------------------------------- Gabriel Moreira - RU: 3329252"); //Informações do aluno
 	printf("\n\n");
-	printf("\t\t\t\t.:.:.:.:.:IMPOSTO DE RENDA:.:.:.:.:.");
+	printf("\t\t\t\t.:.:.:.:.:IMPOSTO DE RENDA:.:.:.:.:."); //Titulo
 	printf("\n\n");
 
 	printf("	Base de calculdo \t Aliquota");
 	printf("\n\n");
 	printf("	1.637.11 - XXX-XXX \t    0 \n");
 	printf("	1.637.12 - 2453.50   \t  7.5 \n");
-	printf("	2.453.51 - 3.71.38   \t 15.0 \n");
+	printf("	2.453.51 - 3.71.38   \t 15.0 \n");	//Legendas 
 	printf("	3.271.39 - 4.087.65   \t 22.5 \n");
 	printf("	XXX-XXXX - 4.087.65 \t 27.5 \n\n");
 
-	printf("Informe o nome do funcionario: ");
-	gets_s(Funcionario.nome);
+	printf("Informe o nome do funcionario: "); 
+	gets_s(Funcionario.nome); //Pega o nome inserido e armazena na variavel nome dentro da struct.
 	printf("\n");
 
 	printf("Informe o salario do funcionario: ");
-	scanf_s("%f", &Funcionario.salario);
+	scanf_s("%f", &Funcionario.salario); //Pega o salario inserido e armazena na variavel salario dentro da struct.
 	printf("\n");
 
-	if (Funcionario.salario < 1637.11)
+	if (Funcionario.salario < 1637.11) //If para o salario menor que 1637
 	{ 
 		printf("Nao tera de pagar nenhum valor. \n");
 	}
 
-	if (Funcionario.salario > 1637.12 && Funcionario.salario < 2453.50)
+	if (Funcionario.salario > 1637.12 && Funcionario.salario < 2453.50) //If para o salario menor que 1637 e maior que 2453
 	{
 		float resultado;
 
@@ -62,7 +62,7 @@ int main() {
 		printf("Resultado do calculo do imposto de renda de %s: %.2f R$ \n\n", Funcionario.nome, resultado);
 	}
 
-	if (Funcionario.salario > 2453.51 && Funcionario.salario < 3271.38)
+	if (Funcionario.salario > 2453.51 && Funcionario.salario < 3271.38) //If para o salario menor que 2453 e maior que 3271
 	{
 		float resultado;
 
@@ -71,7 +71,7 @@ int main() {
 		printf("Resultado do calculo do imposto de renda de %s: %.2f R$ \n\n", Funcionario.nome, resultado);
 	}
 
-	if (Funcionario.salario > 3271.39 && Funcionario.salario < 4087.65)
+	if (Funcionario.salario > 3271.39 && Funcionario.salario < 4087.65) //If para o salario menor que 3271 e maior que 4087
 	{
 		float resultado;
 
@@ -80,7 +80,7 @@ int main() {
 		printf("Resultado do calculo do imposto de renda de %s: %.2f R$ \n\n", Funcionario.nome, resultado);
 	}
 
-	if (Funcionario.salario > 4087.65)
+	if (Funcionario.salario > 4087.65) //If para o salario maior que 4087
 	{
 		float resultado;
 
@@ -88,6 +88,8 @@ int main() {
 		printf("\n");
 		printf("Resultado do calculo do imposto de renda de %s: %.2f R$ \n\n", Funcionario.nome, resultado);
 	}
-	printf("Exercicio 2 ---------------------------------------------------------------------------- Gabriel Moreira - RU: 3329252");
+	printf("Exercicio 2 ---------------------------------------------------------------------------- Gabriel Moreira - RU: 3329252"); //Informações do aluno
 		printf("\n\n");
+		return 0;
+
 }
